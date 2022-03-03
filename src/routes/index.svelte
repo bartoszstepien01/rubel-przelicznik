@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import moment from 'moment/min/moment-with-locales';
+	import moment from 'moment/min/moment-with-locales.js';
 
 	interface ForexData {
 		time_last_update_unix: number;
