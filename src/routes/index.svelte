@@ -15,6 +15,9 @@
 	let pln: string;
 	let usd: string;
 	let eur: string;
+	let robux: string;
+	let gems: string;
+	let vbucks: string;
 
 	onMount(async() => {
 		let response = await fetch('https://open.er-api.com/v6/latest/USD');
@@ -23,6 +26,9 @@
 		pln = (data.rates.PLN / data.rates.RUB * 100).toFixed(2);
 		usd = (1 / data.rates.RUB * 100).toFixed(2);
 		eur = (data.rates.EUR / data.rates.RUB * 100).toFixed(2);
+		robux = (1 / data.rates.RUB * 80).toFixed(2) + '-' + (1 / data.rates.RUB * 100).toFixed(2);
+		gems = (1 / data.rates.RUB * 80).toFixed(2) + '-' + (1 / data.rates.RUB * 140).toFixed(2);
+		vbucks = (1 / data.rates.RUB * 125).toFixed(2) + '-' + (1 / data.rates.RUB * 168.75).toFixed(2);
 
 		moment.locale('pl');
 		lastUpdate = moment.unix(data.time_last_update_unix).fromNow();
@@ -34,7 +40,7 @@
 </svelte:head>
 
 <div class="flex items-center justify-center h-screen">
-	<div class="bg-white rounded-md text-black w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 xl:w-1/4 2xl:w-1/5">
+	<div class="bg-white rounded-md text-black ">
 		<div class="p-4 bg-yellow-400 rounded-t-md">
 			<h1 class="text-3xl font-semibold">Przelicznik rubla</h1>
 			<p>Ostatnio zaktualizowano: {lastUpdate}</p>
@@ -45,6 +51,9 @@
 				<p class="text-lg text-center font-medium"><span class="text-white bg-black bg-opacity-75 rounded-sm px-2">{pln}</span> groszy</p>
 				<p class="text-lg text-center font-medium"><span class="text-white bg-black bg-opacity-75 rounded-sm px-2">{usd}</span> centów</p>
 				<p class="text-lg text-center font-medium"><span class="text-white bg-black bg-opacity-75 rounded-sm px-2">{eur}</span> eurocentów</p>
+				<p class="text-lg text-center font-medium"><span class="text-white bg-black bg-opacity-75 rounded-sm px-2">{robux}</span> Robuxów</p>
+				<p class="text-lg text-center font-medium"><span class="text-white bg-black bg-opacity-75 rounded-sm px-2">{gems}</span> gemów</p>
+				<p class="text-lg text-center font-medium"><span class="text-white bg-black bg-opacity-75 rounded-sm px-2">{vbucks}</span> V-dolców</p>
 			</div>
 		</div>
 		<div class="text-center pb-4">
