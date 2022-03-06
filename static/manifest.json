@@ -1,7 +1,7 @@
 {
 	"short_name": "Rubel",
 	"name": "Przelicznik rubla",
-	"start_url": "/",
+	"start_url": "/rubel-przelicznik/",
 	"icons": [
 		{
 			"src": "favicon.png",
@@ -11,7 +11,7 @@
 	],
 	"background_color": "#3482F6",
 	"display": "standalone",
-	"scope": "/",
+	"scope": "/rubel-przelicznik/",
 	"theme_color": "#3482F6",
 	"description": "Przelicznik kacapskiego pieniądza na inne, bardziej cywilizowane waluty."
 }
