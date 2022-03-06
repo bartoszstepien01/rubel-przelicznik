@@ -1,6 +1,6 @@
-const timestamp = 1646605375622;
+const timestamp = 1646605865903;
 const build = [
-  "/rubel-przelicznik/_app/start-e9782411.js",
+  "/rubel-przelicznik/_app/start-94e52d3c.js",
   "/rubel-przelicznik/_app/pages/__layout.svelte-3a849228.js",
   "/rubel-przelicznik/_app/assets/pages/__layout.svelte-8eea9c1e.css",
   "/rubel-przelicznik/_app/error.svelte-75234407.js",
